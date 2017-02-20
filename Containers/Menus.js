@@ -7,7 +7,9 @@ import {
     ScrollView,
     TouchableHighlight,
     Image,
-    Dimensions
+    Dimensions,
+    BackAndroid,
+    Alert
 } from 'react-native';
 import styles from '../Style/StyleMenu';
 import { Actions } from 'react-native-router-flux';
@@ -15,7 +17,36 @@ import TopMenu from './TopMenu';
 import MainSlider from 'Himal/Slider/MainSlider';
 const deviceWidth = Dimensions.get("window").width;
 const deviceHeight = Dimensions.get("window").height;
+import SplashScreen from 'react-native-smart-splash-screen'
+import striptags from 'strip';
 export default class Menus extends Component {
+
+  constructor(){
+    super()
+    this.state={
+      data:'',
+      loaded:true
+    }
+  }
+componentDidMount(){
+   SplashScreen.close(SplashScreen.animationType.scale, 2000, 800)
+}
+componentWillMount(){
+  BackAndroid.addEventListener('hardwareBackPress', this.handleBackAndroid.bind(this));
+}
+
+handleBackAndroid(){
+  Alert.alert(
+      'Himal Dental Hospital',
+      'Are you sure to exit?',
+      [
+        {text: 'Cancel' },
+        {text: 'OK', onPress: () => BackAndroid.exitApp()},
+      ]
+    )
+    return true;
+}
+
     render(){
         return(
                 <View style ={styles.container}>
@@ -27,7 +58,7 @@ export default class Menus extends Component {
 
                     <View style={styles.container2}>
                         <View style={styles.container21}>
-                                <TouchableHighlight style={styles.container211} onPress={Actions.treatment}>
+                                <TouchableHighlight style={styles.container211} onPress={Actions.treatment} underlayColor={'transparent'}>
                                         <View>
                                             <Image
                                                 source={require('../Images/treatment.png')}
@@ -40,7 +71,7 @@ export default class Menus extends Component {
                                         </View>
                                 </TouchableHighlight>
 
-                                <TouchableHighlight style={styles.container221} onPress={Actions.gallery}>
+                                <TouchableHighlight style={styles.container221} onPress={Actions.gallery} underlayColor={'transparent'}>
                                     <View>
                                         <Image
                                             source={require('../Images/gallery.jpg')}
@@ -56,7 +87,7 @@ export default class Menus extends Component {
 
                         <View style={styles.container22}>
 
-                                <TouchableHighlight style={styles.container212} onPress={Actions.doctorProfiles}>
+                                <TouchableHighlight style={styles.container212} onPress={Actions.doctors} underlayColor={'transparent'}>
                                     <View>
                                         <Image
                                             source={require('../Images/doctor.png')}
@@ -69,7 +100,7 @@ export default class Menus extends Component {
                                     </View>
                                 </TouchableHighlight>
 
-                                <TouchableHighlight onPress={Actions.branches} style={styles.container222}>
+                                <TouchableHighlight onPress={Actions.branches} style={styles.container222} underlayColor={'transparent'}>
                                     <View>
                                         <Image
                                             source={require('../Images/branches.png')}
@@ -85,7 +116,7 @@ export default class Menus extends Component {
                         </View>
 
                         <View style={styles.container23}>
-                                <TouchableHighlight onPress={Actions.appointments} style={styles.container213}>
+                                <TouchableHighlight onPress={Actions.appointments} style={styles.container213} underlayColor={'transparent'}>
                                     <View>
                                         <Image
                                             source={require('../Images/appointment.png')}
@@ -99,7 +130,7 @@ export default class Menus extends Component {
                                 </TouchableHighlight>
 
 
-                                <TouchableHighlight onPress={Actions.aboutUs} style={styles.container223}>
+                                <TouchableHighlight onPress={Actions.aboutUs} style={styles.container223} underlayColor={'transparent'}>
                                     <View>
                                         <Image
                                             source={require('../Images/about.png')}

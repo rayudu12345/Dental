@@ -28,7 +28,7 @@ export default class SideBar extends Component {
             <ScrollView  style={SharedStyles.menuSection}>
 
                 <View style={SharedStyles.avatarContainer}>
-                    <TouchableHighlight onPress={Actions.menus}>
+                    <TouchableHighlight onPress={Actions.menus} underlayColor={'transparent'}>
                         <Image
                             style={SharedStyles.avatar}
                             source={require('../Images/himal.jpg')}
@@ -36,20 +36,20 @@ export default class SideBar extends Component {
                     </TouchableHighlight>
                     <Text style={SharedStyles.name} onPress={Actions.menus}>Himal Dental Hospital</Text>
                 </View>
-                <TouchableHighlight style={SharedStyles.menuContainer} onPress={Actions.message}>
+                <TouchableHighlight style={SharedStyles.menuContainer} onPress={Actions.message} underlayColor={'transparent'}>
                     <Text
                         style={SharedStyles.itemText}>
                         Message from Director
                     </Text>
                 </TouchableHighlight>
-                <TouchableHighlight style={SharedStyles.menuContainer} onPress={Actions.dentalCollege}>
+                <TouchableHighlight style={SharedStyles.menuContainer} onPress={Actions.dentalCollege} underlayColor={'transparent'}>
                     <Text
 
                         style={SharedStyles.itemText}>
                         Himal Institute of Dental Sciences
                     </Text>
                 </TouchableHighlight>
-                <TouchableHighlight style={SharedStyles.menuContainer} onPress={Actions.whyUs}>
+                <TouchableHighlight style={SharedStyles.menuContainer} onPress={Actions.whyUs} underlayColor={'transparent'}>
                     <Text
 
                         style={SharedStyles.itemText}>
@@ -57,7 +57,7 @@ export default class SideBar extends Component {
                     </Text>
                 </TouchableHighlight>
 
-                <TouchableHighlight style={SharedStyles.menuContainer} onPress={Actions.FAQ}>
+                <TouchableHighlight style={SharedStyles.menuContainer} onPress={Actions.FAQ} underlayColor={'transparent'}>
                     <Text
 
                         style={SharedStyles.itemText}>
@@ -65,27 +65,15 @@ export default class SideBar extends Component {
                     </Text>
                 </TouchableHighlight>
 
-                <TouchableHighlight style={SharedStyles.menuContainer} onPress={Actions.menus}>
-                    <Text
-
-                        style={SharedStyles.itemText}>
-                        Location
-                    </Text>
-                </TouchableHighlight>
-                <TouchableHighlight style={SharedStyles.menuContainer} onPress={Actions.contactUs}>
+                <TouchableHighlight style={SharedStyles.menuContainer} onPress={Actions.contactUs} underlayColor={'transparent'}>
                     <Text
 
                         style={SharedStyles.itemText}>
                         Contact Us
                     </Text>
                 </TouchableHighlight>
-                <TouchableHighlight style={SharedStyles.menuContainer} onPress={Actions.menus}>
-                    <Text
-                        style={SharedStyles.itemText}>
-                        Share
-                    </Text>
-                </TouchableHighlight>
-                <TouchableHighlight style={SharedStyles.menuContainer}>
+              
+                <TouchableHighlight style={SharedStyles.menuContainer} underlayColor={'transparent'}>
                     <Text
                         style={SharedStyles.itemText}>
 

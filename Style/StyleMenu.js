@@ -14,7 +14,7 @@ export default StyleSheet.create({
 
     },
     container1:{
-        flex:2,
+        flex:1,
         flexDirection:'row',
     },
     container2:{
@@ -48,7 +48,6 @@ export default StyleSheet.create({
     container211: {
         flex:1,
         flexDirection:'row',
-        borderWidth:2,
         width:0.2 * windowWidth,
         height:0.2 * windowWidth,
         borderColor: '#ffcc99',
@@ -57,7 +56,6 @@ export default StyleSheet.create({
     container221: {
         flex:1,
         flexDirection:'row',
-        borderWidth:2,
         width:0.2 * windowWidth,
         height:0.2 * windowWidth,
         borderColor: '#ffcc99',
@@ -66,7 +64,6 @@ export default StyleSheet.create({
     container212: {
         flex:1,
         flexDirection:'row',
-        borderWidth:2,
         width:0.2 * windowWidth,
         height:0.2 * windowWidth,
         borderColor: '#ffcc99',
@@ -74,7 +71,6 @@ export default StyleSheet.create({
     container222: {
         flex:1,
         flexDirection:'row',
-        borderWidth:2,
         width:0.2 * windowWidth,
         height:0.2 * windowWidth,
         borderColor: '#ffcc99',
@@ -82,7 +78,6 @@ export default StyleSheet.create({
     container213: {
         flex:1,
         flexDirection:'row',
-        borderWidth:2,
         width:0.225 * windowWidth,
         height:0.2 * windowWidth,
         borderColor: '#ffcc99',
@@ -90,7 +85,6 @@ export default StyleSheet.create({
     container223: {
         flex:1,
         flexDirection:'row',
-        borderWidth:2,
         width:0.2 * windowWidth,
         height:0.2 * windowWidth,
         borderColor: '#ffcc99',

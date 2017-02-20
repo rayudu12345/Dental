@@ -16,10 +16,13 @@
       android:label="@string/app_name"
       android:icon="@mipmap/ic_launcher"
       android:theme="@style/AppTheme">
+      <meta-data
+     android:name="com.google.android.geo.API_KEY"
+     android:value="AIzaSyCF4O0NlR4NBAXPuNiJrv0ZfXlmrg3sYNM"/>
       <activity
         android:name=".MainActivity"
         android:label="@string/app_name"
-        android:screenOrientation="portrait"
+        android:screenOrientation="nosensor"
         android:configChanges="keyboard|keyboardHidden|orientation|screenSize">
         <intent-filter>
             <action android:name="android.intent.action.MAIN" />
@@ -27,6 +30,7 @@
         </intent-filter>
       </activity>
       <activity android:name="com.facebook.react.devsupport.DevSettingsActivity" />
+
     </application>
 
 </manifest>

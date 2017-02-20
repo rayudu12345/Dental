@@ -72,6 +72,7 @@ export default StyleSheet.create({
         marginRight: 25,
         color: '#030303',
         textAlignVertical: 'top',
+
     },
     contentImage : {
         marginLeft: 25,

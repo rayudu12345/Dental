@@ -16,6 +16,7 @@ import {
 } from 'react-native';
 
 import SharedStyles from '../Style/SharedStyles';
+import {Actions} from 'react-native-router-flux';
 
 export default class Branches extends Component{
   render(){
@@ -34,87 +35,117 @@ export default class Branches extends Component{
       <View>
         <Text style= {SharedStyles.heading2}>Main Branch</Text>
         </View>
-        <View>
-        <Text style = {SharedStyles.content}>
-        Himal Dental Hospital and Institute of Dental Sciences{'\n'}
-        Dhumbarahi, Kathmandu {'\n'}
-        Phone Number: 01-4492692
-         </Text>
-      </View>
+        <TouchableHighlight onPress={()=>Actions.Dhumbarahi({title:'Dhumbarahi'})} underlayColor={'transparent'}>
+          <View style={styles.contentContainer}>
+          <Text style = {SharedStyles.content}>
+          Himal Dental Hospital and Institute of Dental Sciences{'\n'}
+           Dhumbarahi, Kathmandu {'\n'}
+           </Text>
+        </View>
+      </TouchableHighlight>
+
       <View>
         <Text style= {SharedStyles.heading2}>Other Branches</Text>
-        </View>
-        <View>
+      </View>
+
+      <TouchableHighlight onPress={()=>Actions.Chabhil({title:'Chabhil'})} underlayColor={'transparent'}>
+        <View style={styles.contentContainer}>
         <Text style = {SharedStyles.content}>
         Himal Dental Hospital{'\n'}
         Chabhil, Kathmandu {'\n'}
-        Phone Number: 01-4492800, 01-4465742
          </Text>
       </View>
-      <View>
-      <Text style = {SharedStyles.content}>
-      Himal Dental Hospital {'\n'}
-      Lagankhel, Lalitpur {'\n'}
-      Phone Number: 016-201551
-       </Text>
-    </View>
-      <View>
-      <Text style = {SharedStyles.content}>
-      Himal Dental Hospital {'\n'}
-      Itahari, Sunsari {'\n'}
-      Phone Number: 025-580929
-       </Text>
-    </View>
-      <View>
-      <Text style = {SharedStyles.content}>
-      Himal Dental Hospital {'\n'}
-      Hetauda, Makwanpur {'\n'}
-      Phone Number: 057-520584
-       </Text>
-    </View>
-      <View>
-      <Text style = {SharedStyles.content}>
-      Himal Dental Hospital {'\n'}
-      Narayanghat, Chitwan {'\n'}
-      Phone Number: 056-521919
-       </Text>
-    </View>
-      <View>
-      <Text style = {SharedStyles.content}>
-      Himal Dental Hospital {'\n'}
-      Nepalgunj, Banke {'\n'}
-      Phone Number: 081-521843
-       </Text>
-    </View>
-      <View>
-      <Text style = {SharedStyles.content}>
-      Himal Dental Hospital {'\n'}
-      Dhangadi, Kailali {'\n'}
-      Phone Number: 091-526103  099-520800
-       </Text>
-    </View>
-      <View>
-      <Text style = {SharedStyles.content}>
-      Himal Dental Hospital {'\n'}
-      Mahendranagar, Kanchanpur {'\n'}
-      Phone Number: 099-520800
-       </Text>
-    </View>
-      <View>
+      </TouchableHighlight>
+
+      <TouchableHighlight onPress={()=>Actions.Lagankhel({title:'Lagankhel'})} underlayColor={'transparent'}>
+          <View style={styles.contentContainer}>
+        <Text style = {SharedStyles.content}>
+        Himal Dental Hospital {'\n'}
+        Lagankhel, Lalitpur {'\n'}
+         </Text>
+      </View>
+  </TouchableHighlight>
+
+
+  <TouchableHighlight onPress={()=>Actions.Itahari({title:'Ithari'})} underlayColor={'transparent'}>
+  <View style={styles.contentContainer}>
+    <Text style = {SharedStyles.content}>
+    Himal Dental Hospital {'\n'}
+    Itahari, Sunsari {'\n'}
+     </Text>
+  </View>
+</TouchableHighlight>
+
+
+<TouchableHighlight onPress={()=>Actions.Hetauda({title:'Hetauda'})} underlayColor={'transparent'}>
+<View style={styles.contentContainer}>
+  <Text style = {SharedStyles.content}>
+  Himal Dental Hospital {'\n'}
+  Hetauda, Makwanpur {'\n'}
+   </Text>
+</View>
+</TouchableHighlight>
+
+
+<TouchableHighlight onPress={()=>Actions.Narayanghat({title:'Narayanghat'})} underlayColor={'transparent'}>
+<View style={styles.contentContainer}>
+  <Text style = {SharedStyles.content}>
+  Himal Dental Hospital {'\n'}
+  Narayanghat, Chitwan {'\n'}
+   </Text>
+</View>
+</TouchableHighlight>
+
+
+
+<TouchableHighlight onPress={()=>Actions.Nepalgunj({title:'Nepalgunj'})} underlayColor={'transparent'}>
+<View style={styles.contentContainer}>
+  <Text style = {SharedStyles.content}>
+  Himal Dental Hospital {'\n'}
+  Nepalgunj, Banke {'\n'}
+
+   </Text>
+</View>
+</TouchableHighlight>
+
+
+<TouchableHighlight onPress={()=>Actions.Dhangadi({title:'Dhangadi'})} underlayColor={'transparent'}>
+<View style={styles.contentContainer}>
+  <Text style = {SharedStyles.content}>
+  Himal Dental Hospital {'\n'}
+  Dhangadi, Kailali {'\n'}
+   </Text>
+</View>
+</TouchableHighlight>
+
+
+<TouchableHighlight onPress={()=>Actions.Mahendranagar({title:'Mahendranagar'})} underlayColor={'transparent'}>
+<View style={styles.contentContainer}>
+    <Text style = {SharedStyles.content}>
+    Himal Dental Hospital {'\n'}
+    Mahendranagar, Kanchanpur {'\n'}
+     </Text>
+  </View>
+</TouchableHighlight>
+
+<TouchableHighlight onPress={()=>Actions.Dadeldhura({title:'Dadeldhura'})} underlayColor={'transparent'}>
+<View style={styles.contentContainer}>
       <Text style = {SharedStyles.content}>
       Himal Dental Hospital {'\n'}
       Dadeldhura {'\n'}
-      Phone Number: 096-410247
        </Text>
     </View>
-      <View>
-      <Text style = {SharedStyles.content}>
-      Himal Dental Hospital {'\n'}
-      Baitadi {'\n'}
-      Phone Number: 095-690366
-       </Text>
-    </View>
+</TouchableHighlight>
       </ScrollView>
     )
   }
 }
+
+
+const styles = StyleSheet.create({
+  contentContainer:{
+    borderWidth:3,
+    borderColor:'#f47442',
+    margin:10,
+  }
+})

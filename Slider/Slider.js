@@ -51,6 +51,7 @@ export default class SliderImage extends Component {
        require('../Images/slider2.jpg'),
        require('../Images/slider3.jpg')
       ]}
+    height={0.35 * deviceHeight}
     position={this.state.position}
     onPositionChanged={position => this.setState({position})}/>
     </View>

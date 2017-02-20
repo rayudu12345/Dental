@@ -19,7 +19,7 @@ export default class TopMenu extends Component{
     render(){
         return(
                 <View style = {styles.menu} >
-                    <TouchableHighlight onPress={Actions.sideBar}>
+                    <TouchableHighlight onPress={()=>{Actions.sideBar({title:'Himal Dental Hospital'})}} underlayColor={'transparent'}>
                         <Image
                             source={require('../Images/menu.png')} style={styles.menuImage}
 

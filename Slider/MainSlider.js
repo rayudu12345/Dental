@@ -17,12 +17,8 @@ import SliderImage from './Slider';
 export default class MainSlider extends Component {
     render() {
         return (
-            <View style = {styles.container}>
-                <View style = {styles.header}>
                     <SliderImage />
-                </View>
 
-            </View>
         );
     }
 }
