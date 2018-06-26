@@ -3,7 +3,9 @@
   "version": "0.0.1",
   "private": true,
   "scripts": {
-    "start": "node node_modules/react-native/local-cli/cli.js start"
+    "start": "node node_modules/react-native/local-cli/cli.js start",
+    "snyk-protect": "snyk protect",
+    "prepare": "npm run snyk-protect"
   },
   "dependencies": {
     "native-base": "^0.5.22",
@@ -17,6 +19,8 @@
     "react-native-vector-icons": "^4.0.0",
     "strip": "^3.0.0",
     "striptags": "^2.2.1",
-    "tcomb-form-native": "^0.6.4"
-  }
+    "tcomb-form-native": "^0.6.4",
+    "snyk": "^1.85.0"
+  },
+  "snyk": true
 }
