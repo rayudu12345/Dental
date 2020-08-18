@@ -6,7 +6,7 @@
     "start": "node node_modules/react-native/local-cli/cli.js start"
   },
   "dependencies": {
-    "native-base": "^0.5.22",
+    "native-base": "^2.13.0",
     "react": "15.4.0",
     "react-native": "0.40",
     "react-native-drawer": "^2.3.0",
